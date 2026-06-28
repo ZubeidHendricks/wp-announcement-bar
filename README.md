@@ -1,4 +1,4 @@
-# Announcement Bar
+# Slim Announcement Bar
 
 A dismissible sticky announcement / notification bar for the top of your site —
 sales, notices, links — with no theme editing. Part of the
@@ -12,7 +12,7 @@ CTA button, custom background/text colours, and a dismiss button remembered for
 
 ## Settings
 
-**Settings → Announcement Bar** — enable, message, button text/URL, colours,
+**Settings → Slim Announcement Bar** — enable, message, button text/URL, colours,
 dismissible, sticky (Pro).
 
 ## Free vs Pro

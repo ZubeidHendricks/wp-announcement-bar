@@ -1,4 +1,4 @@
-=== Announcement Bar ===
+=== Slim Announcement Bar ===
 Contributors: zubeidhendricks
 Tags: announcement, notification bar, banner, sale bar, hello bar
 Requires at least: 5.8
@@ -32,7 +32,7 @@ Visitors can dismiss it (remembered for 7 days).
 
 1. Install via Plugins → Add New, or upload the zip.
 2. Activate.
-3. Go to Settings → Announcement Bar, set your message, and tick "Show".
+3. Go to Settings → Slim Announcement Bar, set your message, and tick "Show".
 
 == Frequently Asked Questions ==
 

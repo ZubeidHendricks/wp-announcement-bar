@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Announcement Bar
- * Plugin URI:        https://zubeidhendricks.dev/wp-plugins/announcement-bar
+ * Plugin Name:       Slim Announcement Bar
+ * Plugin URI:        https://zubeidhendricks.dev/wp-plugins/slim-announcement-bar
  * Description:        Add a dismissible sticky announcement / notification bar to the top of your site — sales, notices, links — no theme editing.
  * Version:           1.0.0
  * Requires at least: 5.8
@@ -10,7 +10,7 @@
  * Author URI:        https://zubeidhendricks.dev
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       announcement-bar
+ * Text Domain:       slim-announcement-bar
  *
  * @package AnnouncementBar
  */
@@ -22,59 +22,59 @@ define( 'ANNOUNCEMENT_BAR_VERSION', '1.0.0' );
 require_once __DIR__ . '/includes/factory-core.php';
 
 /**
- * Announcement Bar.
+ * Slim Announcement Bar.
  */
 final class AnnouncementBar extends ZubFactory_Plugin {
 
 	protected function configure() {
-		$this->slug    = 'announcement-bar';
-		$this->title   = 'Announcement Bar';
+		$this->slug    = 'slim-announcement-bar';
+		$this->title   = 'Slim Announcement Bar';
 		$this->version = ANNOUNCEMENT_BAR_VERSION;
 	}
 
 	protected function settings_fields() {
 		return array(
 			'enabled'     => array(
-				'label'    => __( 'Status', 'announcement-bar' ),
+				'label'    => __( 'Status', 'slim-announcement-bar' ),
 				'type'     => 'checkbox',
-				'cb_label' => __( 'Show the announcement bar', 'announcement-bar' ),
+				'cb_label' => __( 'Show the announcement bar', 'slim-announcement-bar' ),
 				'default'  => 0,
 			),
 			'message'     => array(
-				'label'   => __( 'Message', 'announcement-bar' ),
+				'label'   => __( 'Message', 'slim-announcement-bar' ),
 				'type'    => 'text',
 				'default' => 'Summer sale — 20% off everything this week!',
 			),
 			'link_text'   => array(
-				'label'   => __( 'Button text', 'announcement-bar' ),
+				'label'   => __( 'Button text', 'slim-announcement-bar' ),
 				'type'    => 'text',
 				'default' => 'Shop now',
 			),
 			'link_url'    => array(
-				'label'   => __( 'Button URL', 'announcement-bar' ),
+				'label'   => __( 'Button URL', 'slim-announcement-bar' ),
 				'type'    => 'text',
 				'default' => '',
 			),
 			'bg'          => array(
-				'label'   => __( 'Background colour', 'announcement-bar' ),
+				'label'   => __( 'Background colour', 'slim-announcement-bar' ),
 				'type'    => 'color',
 				'default' => '#2271b1',
 			),
 			'fg'          => array(
-				'label'   => __( 'Text colour', 'announcement-bar' ),
+				'label'   => __( 'Text colour', 'slim-announcement-bar' ),
 				'type'    => 'color',
 				'default' => '#ffffff',
 			),
 			'dismissible' => array(
-				'label'    => __( 'Dismiss', 'announcement-bar' ),
+				'label'    => __( 'Dismiss', 'slim-announcement-bar' ),
 				'type'     => 'checkbox',
-				'cb_label' => __( 'Let visitors close the bar (remembered for 7 days)', 'announcement-bar' ),
+				'cb_label' => __( 'Let visitors close the bar (remembered for 7 days)', 'slim-announcement-bar' ),
 				'default'  => 1,
 			),
 			'sticky'      => array(
-				'label'    => __( 'Sticky', 'announcement-bar' ),
+				'label'    => __( 'Sticky', 'slim-announcement-bar' ),
 				'type'     => 'checkbox',
-				'cb_label' => __( 'Keep the bar fixed while scrolling', 'announcement-bar' ),
+				'cb_label' => __( 'Keep the bar fixed while scrolling', 'slim-announcement-bar' ),
 				'pro'      => true,
 			),
 		);
@@ -111,13 +111,13 @@ final class AnnouncementBar extends ZubFactory_Plugin {
 				background:none;border:0;color:inherit;font-size:20px;cursor:pointer;line-height:1;opacity:.8}
 			#zab .zab-x:hover{opacity:1}
 		</style>
-		<div id="zab" role="region" aria-label="<?php esc_attr_e( 'Site announcement', 'announcement-bar' ); ?>">
+		<div id="zab" role="region" aria-label="<?php esc_attr_e( 'Site announcement', 'slim-announcement-bar' ); ?>">
 			<span><?php echo esc_html( $message ); ?></span>
 			<?php if ( $link_url && $link_text ) : ?>
 				<a class="zab-btn" href="<?php echo $link_url; // phpcs:ignore ?>"><?php echo esc_html( $link_text ); ?></a>
 			<?php endif; ?>
 			<?php if ( $dismissible ) : ?>
-				<button class="zab-x" aria-label="<?php esc_attr_e( 'Dismiss', 'announcement-bar' ); ?>">&times;</button>
+				<button class="zab-x" aria-label="<?php esc_attr_e( 'Dismiss', 'slim-announcement-bar' ); ?>">&times;</button>
 			<?php endif; ?>
 		</div>
 		<?php if ( $dismissible ) : ?>
