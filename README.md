@@ -1,5 +1,7 @@
 # Slim Announcement Bar
 
+🌐 **[Browse all plugins](https://zubeidhendricks.github.io/wp-plugins-site/)** · ⬇️ **[Download .zip](https://github.com/ZubeidHendricks/wp-slim-announcement-bar/releases/latest/download/slim-announcement-bar.zip)**
+
 A dismissible sticky announcement / notification bar for the top of your site —
 sales, notices, links — with no theme editing. Part of the
 [Zub Plugin Factory](https://github.com/ZubeidHendricks/wp-plugin-factory).
